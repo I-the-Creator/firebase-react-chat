@@ -167,7 +167,7 @@ $bg-secondary-color: #8da4f1;
                     border: none;
                     cursor: pointer;
 
-                    // position Logout button with tablet and lower screen resolution
+                    // position Logout button for tablet and lower screen resolution
                     @include tablet {
                         position: absolute;
                         bottom: 10px;
