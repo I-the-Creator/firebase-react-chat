@@ -287,6 +287,11 @@ $bg-secondary-color: #8da4f1;
                         object-fit: cover;
                         ;
                     }
+
+                    span {
+                        margin-left: 4px;
+                        font-size: 12px;
+                    }
                 }
 
                 .messageContent {
