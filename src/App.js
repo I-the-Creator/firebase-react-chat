@@ -15,15 +15,15 @@ function App() {
 
   const ProtectedRoute = ({ children }) => {
     if (!currentUser) {
-      return <Navigate to="/login" />
+      return <Navigate to="/chat_app/login" />
     }
     return children
   }
 
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/">
+      <Routes basename={process.env.PUBLIC_URL}>
+        <Route path="chat_app/*">
           <Route
             index
             element={
