@@ -83,7 +83,7 @@ const Register = () => {
 
               // crete empty 'userChats' collection after Registration is complete
               await setDoc(doc(db, 'userChats', response.user.uid), {})
-              navigate('/') // on successful registration navigate to Home page
+              navigate('/chat_app/') // on successful registration navigate to Home page
             }
           )
         }
@@ -116,7 +116,8 @@ const Register = () => {
           )}
         </form>
         <p>
-          Do you have an account? <Link to="/login">Login</Link>
+          Do you have an account?{' '}
+          <Link to={`${process.env.REACT_APP_LOCAL_PATH}/login`}>Login</Link>
         </p>
       </div>
     </div>
