@@ -21,7 +21,7 @@ const Login = () => {
       await signInWithEmailAndPassword(auth, email, password)
 
       // if everything is ok, redirect to home page
-      navigate('/')
+      navigate('/chat_app/')
     } catch (error) {
       setError(true)
       console.log(error)
@@ -45,7 +45,10 @@ const Login = () => {
           )}
         </form>
         <p>
-          Don't have an account? <Link to="/register">Register</Link>
+          Don't have an account?{' '}
+          <Link to={`${process.env.REACT_APP_LOCAL_PATH}/register`}>
+            Register
+          </Link>
         </p>
       </div>
     </div>
